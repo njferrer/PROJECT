@@ -1,0 +1,125 @@
+/* assets/styles/edit-account.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 600px;
+  margin: calc(var(--margin-base) * 3) auto; /* Replaced --spacing-unit with --margin-base */
+  padding: calc(var(--padding-base) * 3);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.container.main-content h1 {
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  margin-bottom: calc(
+    var(--margin-base) * 2
+  ); /* Replaced --spacing-unit * 4 with --margin-base * 2 */
+  text-align: center;
+}
+
+.success-message {
+  background-color: var(--success-color);
+  color: var(--background-color);
+  padding: calc(var(--padding-base) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(
+    var(--margin-base) * 1.5
+  ); /* Replaced --spacing-unit * 2.5 with --margin-base * 1.5 */
+  text-align: center;
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--background-color);
+  padding: calc(var(--padding-base) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(
+    var(--margin-base) * 1.5
+  ); /* Replaced --spacing-unit * 2.5 with --margin-base * 1.5 */
+  text-align: center;
+}
+
+.edit-form {
+  margin-top: calc(
+    var(--margin-base) * 1.25
+  ); /* Replaced --spacing-unit * 2 with --margin-base * 1.25 */
+}
+
+.input-group {
+  margin-bottom: calc(
+    var(--margin-base) * 1.5625
+  ); /* Replaced --spacing-unit * 2.5 with --margin-base * 1.5625 */
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: calc(
+    var(--margin-base) * 0.3125
+  ); /* Replaced --spacing-unit * 0.5 with --margin-base * 0.3125 */
+  color: var(--text-color);
+}
+
+.input-group input {
+  width: 100%;
+  padding: calc(
+    var(--padding-base) * 1
+  ); /* Replaced --spacing-unit with --padding-base */
+  border: 1px solid var(--secondary-color); /* Replaced --secondary-dark with --secondary-color */
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: calc(
+    var(--padding-base) * 1.5
+  ); /* Replaced --spacing-unit with --padding-base */
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Replaced var(--transition-speed) with 0.3s */
+}
+
+.submit-btn:hover {
+  background-color: var(
+    --accent-color
+  ); /* Replaced --primary-dark with --accent-color for a noticeable hover effect */
+}
+
+/* Navbar Styling */
+/* Assuming navbar styles are in theme.css or a common CSS file */
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container.main-content {
+    padding: calc(
+      var(--padding-base) * 3
+    ); /* Replaced --spacing-unit with --padding-base */
+  }
+
+  .container.main-content h1 {
+    font-size: var(--font-size-base);
+  }
+
+  .submit-btn {
+    padding: calc(
+      var(--padding-base) * 0.75
+    ); /* Replaced --spacing-unit with --padding-base */
+    font-size: var(--font-size-small);
+  }
+}

@@ -1,0 +1,71 @@
+/* assets/styles/admin.css */
+
+/* Admin Dashboard Specific Styles */
+
+/* Reusable Card Component */
+.card {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-hover);
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 3);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 1200px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.container.main-content p {
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+/* Admin Grid using CSS Grid */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(var(--spacing-unit) * 4);
+}
+
+/* Admin Option Card */
+.admin-option a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.admin-option i {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.admin-option h2 {
+  font-size: 24px;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.admin-option p {
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+}

@@ -1,0 +1,247 @@
+/* assets/styles/manage-users.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 1200px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.search-form input[type="text"] {
+  width: 300px;
+  padding: calc(var(--spacing-unit) * 1);
+  border: 1px solid var(--secondary-dark);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-size: var(--font-size-base);
+}
+
+.search-form button {
+  padding: calc(var(--spacing-unit) * 1);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: var(--font-size-base);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.search-form button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Success and Error Messages */
+.success-message {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+/* Users Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  padding: calc(var(--spacing-unit) * 1.5);
+  border: 1px solid var(--secondary-dark);
+  text-align: left;
+  font-size: var(--font-size-base);
+}
+
+.users-table th {
+  background-color: var(--primary-light);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: var(--secondary-dark);
+}
+
+.users-table tr:hover {
+  background-color: var(--primary-light);
+}
+
+.users-table td a,
+.users-table td button {
+  margin-right: calc(var(--spacing-unit) * 1);
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.users-table td a:hover,
+.users-table td button:hover {
+  color: var(--primary-dark);
+}
+
+/* Edit and Delete Buttons */
+.edit-btn,
+.delete-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing-unit) * 0.5);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.edit-btn {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+}
+
+.edit-btn:hover {
+  background-color: darken(var(--success-color), 10%);
+}
+
+.delete-btn {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+}
+
+.delete-btn:hover {
+  background-color: darken(var(--error-color), 10%);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--spacing-unit) * 4);
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  margin: 0 5px;
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-dark);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.pagination-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.pagination-btn.active {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .search-form input[type="text"] {
+    width: 100%;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: calc(var(--spacing-unit) * 1);
+    font-size: var(--font-size-small);
+  }
+
+  .users-table td a,
+  .users-table td button {
+    font-size: var(--font-size-small);
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: calc(var(--spacing-unit) * 0.3);
+  }
+
+  .pagination-btn {
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
+    margin: 2px;
+  }
+}
+
+/* Navbar Styling (if different from admin.css) */
+/* If the navbar is consistent across all admin pages, you can remove navbar-specific styles from individual CSS files and keep them in a common CSS file like admin.css or theme.css */
+
+/* Additional Styles (if any) */
+
+/* Example: Hover Effects using HSL */
+.edit-btn:hover {
+  background-color: hsl(
+    var(--success-hue, 120),
+    var(--success-saturation, 60%),
+    var(--success-lightness, 40%)
+  );
+}
+
+.delete-btn:hover {
+  background-color: hsl(
+    var(--error-hue, 0),
+    var(--error-saturation, 70%),
+    var(--error-lightness, 50%)
+  );
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.mb-1 {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.mb-2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

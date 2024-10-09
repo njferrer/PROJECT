@@ -1,0 +1,254 @@
+/* assets/styles/register.css */
+
+/* Remove Reset Styles since admin-theme.css already handles box-sizing, margin, padding, and font-family */
+
+/* Container Styles */
+body.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(
+    --primary-color
+  ); /* Ensure background color matches theme */
+}
+
+/* Container Styles */
+.container {
+  background-color: var(
+    --background-color
+  ); /* Using theme's background color */
+  padding: calc(var(--padding-base) * 2.5); /* 40px if --padding-base is 16px */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px;
+  width: 100%;
+  margin: 40px 0; /* Remove vertical margins as flexbox handles centering */
+}
+
+/* Form Container */
+.form-container h2 {
+  /* text-align: center; */
+  margin-bottom: calc(
+    var(--margin-base) * 1.875
+  ); /* 30px if --margin-base is 16px */
+  font-weight: 700;
+  color: var(--accent-color); /* Using theme's accent color */
+  font-family: var(
+    --primary-font
+  ); /* Ensuring the heading uses the primary font */
+  font-size: 36px;
+}
+
+/* Row for Side by Side Inputs */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding-base); /* 16px */
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: var(--margin-base); /* 16px */
+  position: relative;
+  width: 100%;
+}
+
+.half-width {
+  width: 48%; /* Slightly less than 50% to account for gap */
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: calc(var(--margin-base) / 2); /* 8px */
+  font-weight: 500;
+  color: var(--text-color); /* Using theme's text color */
+  font-family: var(--secondary-font); /* Ensuring labels use secondary font */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px; /* Maintain desired padding */
+  border: 1px solid var(--secondary-color); /* Using theme's secondary color */
+  border-radius: 8px;
+  font-size: var(--font-size-base); /* 16px */
+  transition: border-color 0.3s;
+  font-family: var(--secondary-font); /* Ensuring inputs use secondary font */
+  color: var(--text-color); /* Text color from theme */
+  background-color: #fff; /* Keeping input background white for contrast */
+}
+
+.input-group input:focus {
+  border-color: var(--accent-color); /* Highlight border on focus */
+  outline: none;
+}
+
+/* Error Text */
+.error-text {
+  margin-top: 5px;
+  color: var(--error-color); /* Using theme's error color */
+  font-size: var(--font-size-small); /* 14px */
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+/* Phone Input Styles */
+.phone-input-wrapper {
+  position: relative;
+}
+
+.phone-input-wrapper .phone-prefix {
+  position: absolute;
+  left: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-base); /* 16px */
+  color: var(--text-color); /* Using theme's text color */
+  pointer-events: none;
+}
+
+.phone-input-wrapper input {
+  padding-left: 50px; /* Space for prefix */
+  font-size: var(--font-size-base); /* 16px */
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+/* Aligning Prefix with Input Text */
+.phone-input-wrapper input,
+.phone-input-wrapper .phone-prefix {
+  line-height: 1;
+  height: 48px; /* Consistent height */
+  display: flex;
+  align-items: center;
+}
+
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 50px; /* Space for toggle icon */
+  font-size: var(--font-size-base); /* 16px */
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--secondary-color); /* Using theme's secondary color */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: var(--text-color); /* Darker color on hover */
+}
+
+/* Password Criteria */
+.password-criteria {
+  margin-top: 10px;
+}
+
+.password-criteria p {
+  font-size: var(--font-size-small); /* 14px */
+  color: var(--text-color); /* Using theme's text color */
+  margin-bottom: 5px;
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+.password-criteria ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.password-criteria li {
+  font-size: var(--font-size-small); /* 14px */
+  color: var(--text-color); /* Using theme's text color */
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+.password-criteria li i {
+  margin-right: 8px;
+  color: var(--accent-color); /* Red for unmet criteria */
+}
+
+.password-criteria li.valid i {
+  color: #2ecc71; /* Green for met criteria (could define a success color in admin-theme.css) */
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--accent-color); /* Using theme's accent color */
+  border: none;
+  border-radius: 8px;
+  color: var(--background-color); /* Text color contrasting the button */
+  font-size: var(--font-size-large); /* 18px */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: var(--primary-font); /* Ensuring consistency */
+}
+
+.submit-btn:hover {
+  background-color: #2e85be; /* Slightly darker shade for hover (could use a variable) */
+}
+
+/* Switch Form Link */
+.switch-form {
+  text-align: center;
+  margin-top: var(--margin-base); /* 16px */
+  font-size: var(--font-size-small); /* 14px */
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+.switch-form a {
+  color: var(--accent-color); /* Using theme's accent color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.switch-form a:hover {
+  color: var(--secondary-color); /* Using theme's secondary color on hover */
+  text-decoration: underline;
+}
+
+/* Server Error */
+.server-error {
+  background-color: var(--error-color); /* Using theme's accent color */
+  color: var(--background-color); /* Text color contrasting the background */
+  padding: var(--padding-base); /* 16px */
+  border-radius: 8px;
+  margin-bottom: var(--margin-base); /* 16px */
+  text-align: center;
+  font-family: var(--secondary-font); /* Ensuring consistency */
+}
+
+/* Input Error State */
+.input-error {
+  border-color: var(--accent-color); /* Highlighting input border on error */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px; /* Adjusted padding for smaller screens */
+  }
+}

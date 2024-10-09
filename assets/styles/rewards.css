@@ -1,0 +1,174 @@
+/* rewards.css */
+
+/* Header Section */
+.img-header {
+  padding: 20px 5vw; /* Responsive padding based on viewport width */
+  margin: auto;
+  background-image: url("../images/rewards.png"); /* Corrected relative path */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center the text for better UX */
+}
+
+.img-header h1,
+.img-header p {
+  color: var(--secondary-color); /* Updated to use theme variable */
+  margin: 10px 0;
+}
+
+/* Sales Section */
+.sales {
+  padding: 20px 100px;
+  background-color: var(
+    --secondary-dark
+  ); /* Optional: Add a background color if needed */
+}
+
+.sales-alert-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space between "Sales Alert!" and "Show All" */
+  width: 100%; /* Adjust as needed */
+}
+
+.sales-alert-container h1 {
+  font-size: var(--font-size-large);
+  margin-right: 10px;
+  color: var(--primary-color); /* Matches theme primary color */
+}
+
+.sales-alert-container .show-all {
+  font-size: var(--font-size-small);
+  color: var(--accent-color); /* Matches theme accent color */
+  text-decoration: none;
+}
+
+.sales-alert-container .show-all:hover {
+  color: var(--accent-color-hover); /* Matches theme accent color hover */
+}
+
+/* Recent Perks Section */
+.recent-perks-section {
+  width: 100%;
+  padding: 20px 100px;
+}
+
+.recent-perks-section h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: 15px;
+  color: var(--primary-color); /* Matches theme primary color */
+}
+
+/* Search and Filter Container */
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--margin-base); /* Using theme spacing */
+}
+
+#perk-search {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+}
+
+.perk-filter {
+  width: 28%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Display 5 columns by default */
+  gap: 20px; /* Matches theme spacing */
+}
+
+/* Product Card */
+.product-card {
+  background-color: var(--secondary-color); /* Matches theme background color */
+  padding: 20px;
+  text-align: center;
+  border-radius: var(
+    --border-radius
+  ); /* Rounded corners for better aesthetics */
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease; /* Hover effects */
+  box-shadow: var(--box-shadow);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.product-card img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Slight rounding of image corners */
+}
+
+.product-card p {
+  margin-top: 10px;
+  color: var(--text-color); /* Matches theme text color */
+  font-size: var(--font-size-base); /* Uses theme base font size */
+}
+
+/* 4 Columns */
+@media (max-width: 1600px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 3 Columns */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 Columns */
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 1 Column */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Also adjusted other elements for better mobile view */
+  .img-header {
+    height: 200px;
+  }
+
+  .sales {
+    padding: 20px 20px;
+  }
+
+  .recent-perks-section {
+    padding: 20px 20px;
+  }
+
+  .product-card {
+    width: 200px;
+  }
+}

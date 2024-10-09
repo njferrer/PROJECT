@@ -1,0 +1,74 @@
+/* assets/styles/scan-qr.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 900px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  min-height: 80vh;
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+/* QR Reader Section */
+#reader {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit) * 2);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container.main-content {
+    padding: calc(var(--spacing-unit) * 2.5);
+  }
+
+  .container.main-content h1 {
+    font-size: 24px;
+  }
+
+  #reader {
+    max-width: 100%;
+  }
+}
+
+/* Navbar Styling */
+/* If navbar styles are consistent across all admin pages, consider moving them to a common CSS file like admin.css or theme.css */
+/* Otherwise, style them here accordingly */
+
+/* Additional Styles (if any) */
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.mb-1 {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.mb-2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

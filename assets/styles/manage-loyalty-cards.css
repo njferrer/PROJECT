@@ -1,0 +1,218 @@
+/* assets/styles/manage-loyalty-cards.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 1200px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  min-height: 80vh;
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+/* Success and Error Messages */
+.success-message {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+/* Applications Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.applications-table th,
+.applications-table td {
+  padding: calc(var(--spacing-unit) * 1.5);
+  border: 1px solid var(--secondary-dark);
+  text-align: left;
+  font-size: var(--font-size-base);
+}
+
+.applications-table th {
+  background-color: var(--primary-light);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.applications-table tr:nth-child(even) {
+  background-color: var(--secondary-dark);
+}
+
+.applications-table tr:hover {
+  background-color: var(--primary-light);
+}
+
+.applications-table td a,
+.applications-table td button {
+  margin-right: calc(var(--spacing-unit) * 1);
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.applications-table td a:hover,
+.applications-table td button:hover {
+  color: var(--primary-dark);
+}
+
+/* View, Approve, and Reject Buttons */
+.view-btn,
+.approve-btn,
+.reject-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing-unit) * 0.5);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.view-btn {
+  background-color: var(--primary-light);
+  color: var(--text-color);
+}
+
+.view-btn:hover {
+  background-color: var(--primary-dark);
+  color: var(--secondary-color);
+}
+
+.approve-btn {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+}
+
+.approve-btn:hover {
+  background-color: hsl(
+    var(--success-hue, 120),
+    var(--success-saturation, 60%),
+    var(--success-lightness, 40%)
+  );
+}
+
+.reject-btn {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+}
+
+.reject-btn:hover {
+  background-color: hsl(
+    var(--error-hue, 0),
+    var(--error-saturation, 70%),
+    var(--error-lightness, 50%)
+  );
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--spacing-unit) * 4);
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  margin: 0 5px;
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-dark);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.pagination-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.pagination-btn.active {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .applications-table th,
+  .applications-table td {
+    padding: calc(var(--spacing-unit) * 1);
+    font-size: var(--font-size-small);
+  }
+
+  .applications-table td a,
+  .applications-table td button {
+    font-size: var(--font-size-small);
+  }
+
+  .view-btn,
+  .approve-btn,
+  .reject-btn {
+    padding: calc(var(--spacing-unit) * 0.3);
+  }
+
+  .pagination-btn {
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
+    margin: 2px;
+  }
+}
+
+/* Navbar Styling */
+/* If navbar styles are consistent across all admin pages, consider moving them to a common CSS file like admin.css or theme.css */
+/* Otherwise, style them here accordingly */
+
+/* Additional Styles (if any) */
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.mb-1 {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.mb-2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

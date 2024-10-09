@@ -1,0 +1,159 @@
+/* assets/styles/loyalty-card-register.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 600px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+/* Success and Error Messages */
+.success-message,
+.error-message {
+  padding: calc(var(--spacing-unit) * 1.5);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.success-message {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+}
+
+/* Registration Form Styling */
+.registration-form {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.input-group {
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+  color: var(--text-color);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1);
+  border: 1px solid var(--secondary-dark);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  transition: border-color var(--transition-speed);
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.input-group input[readonly] {
+  background-color: var(--background-readonly);
+  cursor: not-allowed;
+}
+
+/* Submit Button */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Success Message Button */
+.success-message .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+  margin-top: 10px;
+}
+
+.success-message .btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container.main-content {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .container.main-content h1 {
+    font-size: 24px;
+  }
+
+  .input-group p {
+    font-size: var(--font-size-small);
+  }
+
+  .submit-btn {
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5);
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.mb-1 {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.mb-2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

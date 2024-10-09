@@ -1,0 +1,202 @@
+/* assets/styles/process-transaction.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 600px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+/* Success and Error Messages */
+.success-message {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+/* User Information */
+.user-info {
+  background-color: var(--secondary-dark);
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.user-info p {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+  font-size: var(--font-size-base);
+}
+
+.user-info strong {
+  color: var(--primary-color);
+}
+
+/* Transaction Form Styling */
+.transaction-form {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.input-group {
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+  color: var(--text-color);
+}
+
+.input-group select,
+.input-group input {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1);
+  border: 1px solid var(--secondary-dark);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+}
+
+.input-group select:focus,
+.input-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Success and Error Messages within Forms */
+.success-message,
+.error-message {
+  font-size: var(--font-size-base);
+}
+
+/* Navbar Styling */
+/* If navbar styles are consistent across all admin pages, consider moving them to a common CSS file like admin.css or theme.css */
+/* Otherwise, style them here accordingly */
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container.main-content {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .container.main-content h1 {
+    font-size: 24px;
+  }
+
+  .user-info {
+    padding: calc(var(--spacing-unit) * 1.5);
+  }
+
+  .user-info p {
+    font-size: var(--font-size-small);
+  }
+
+  .transaction-form {
+    padding: 0 calc(var(--spacing-unit) * 1.5);
+  }
+
+  .submit-btn {
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5);
+    font-size: var(--font-size-small);
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less depending on screen size */
+  max-width: 400px; /* Limit the width */
+  text-align: center; /* Center text */
+}
+
+/* Close Button */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.mb-1 {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.mb-2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

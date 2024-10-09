@@ -1,0 +1,590 @@
+/* assets/styles/user.css */
+
+/* Define Component-Specific CSS Variables */
+:root {
+  /* Additional Variables */
+  --spacing-unit: 8px; /* Base spacing unit based on comments */
+
+  /* Derived Colors based on theme.css variables */
+  --secondary-dark: #95a5a6; /* Darker shade of --secondary-color */
+  --secondary-light: #ecf0f1; /* Lighter shade of --secondary-color */
+  --text-light: #95a5a6; /* Lighter text color for secondary text */
+  --info-color: var(--accent-color); /* Using accent color for info messages */
+
+  /* For HSL-based hover color */
+  --accent-color-hue: 204; /* Hue component of --accent-color (#3498db) */
+  --accent-color-saturation: 70%; /* Saturation component */
+  --accent-color-hover-lightness: 60%; /* Lightness for hover state */
+
+  /* Transition */
+  --transition-speed: 0.3s; /* Base transition speed */
+}
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 1200px;
+  margin: calc(var(--spacing-unit) * 3) auto;
+  padding: calc(var(--spacing-unit) * 3);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Dashboard Overview Wrapper */
+.dashboard-overview {
+  /* background-color: var(--secondary-light); */
+  padding: calc(var(--spacing-unit) * 4);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 5);
+  /* box-shadow: var(--box-shadow); */
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.welcome-section p {
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+}
+
+/* Points Balance Section */
+.points-balance {
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.points-balance h2 {
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.points-balance p {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.points-balance .btn {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+/* Membership CTA Section Styling */
+.membership-cta {
+  background-color: var(
+    --primary-color
+  ); /* Changed from --primary-light to --primary-color */
+  padding: calc(var(--spacing-unit) * 4);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: calc(var(--spacing-unit) * 5);
+  box-shadow: var(--box-shadow);
+}
+
+.membership-cta h2 {
+  font-size: var(--font-size-large);
+  color: var(--background-color);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.membership-cta p {
+  font-size: var(--font-size-base);
+  color: var(--background-color);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.membership-cta .cta-button {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.membership-cta .cta-button:hover {
+  background-color: hsl(
+    var(--accent-color-hue),
+    var(--accent-color-saturation),
+    var(--accent-color-hover-lightness)
+  );
+}
+
+/* Rewards Section Styling */
+.slider-main-cont {
+  padding: 0 50px;
+  margin: 50px auto;
+}
+
+.slider-cont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  padding: 10px;
+}
+
+.slide img {
+  width: 200px; /* Set a fixed width */
+  height: 240px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+  border-radius: var(--border-radius);
+}
+
+.prev,
+.next {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets and medium-sized screens (1024px and below) */
+@media (max-width: 1024px) {
+  .slide {
+    min-width: 25%; /* Show 4 cards on tablets */
+  }
+
+  .slide img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* Tablets and medium-sized screens (850px and below) */
+@media (max-width: 850px) {
+  .slide {
+    min-width: 33.33%; /* Show 3 cards on tablets */
+  }
+
+  .slide img {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+/* Mobile devices (650px and below) */
+@media (max-width: 650px) {
+  .slide {
+    min-width: 50%; /* Show 2 cards */
+  }
+
+  .slide img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* Mobile devices (425px and below) */
+@media (max-width: 425px) {
+  .slide {
+    min-width: 100%; /* Show 1 card */
+  }
+
+  .slide img {
+    width: 140px;
+    height: 180px;
+  }
+}
+
+/* Banner Container */
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top and margin-bottom can be adjusted using variables if needed */
+}
+
+.banner-slider {
+  width: 100%;
+  max-width: 100vw;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-slider .banner-list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.banner-slider .banner-list img {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.banner-slider .banner-dots {
+  position: absolute;
+  bottom: calc(var(--spacing-unit) + 2px); /* 8px + 2px = 10px */
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.banner-slider .banner-dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-color);
+  margin: calc(var(--spacing-unit) + 2px); /* 8px + 2px = 10px */
+  border-radius: 50%; /* Perfect circles */
+  transition: 0.5s;
+}
+
+.banner-slider .banner-dots li.active {
+  border-radius: 50%; /* Keep as circle for consistency */
+  width: 15px;
+  height: 15px;
+}
+
+/* Responsive Banner Slider */
+@media screen and (max-width: 1024px) {
+  .banner-slider {
+    height: 40vh;
+  }
+  .banner-slider .banner-dots li {
+    width: 8px;
+    height: 8px;
+    margin: calc(var(--spacing-unit)); /* 8px */
+  }
+  .banner-slider .banner-dots li.active {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-slider {
+    height: 35vh;
+  }
+  .banner-slider .banner-dots li {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-slider {
+    height: 30vh;
+  }
+  .banner-container {
+    margin-top: calc(var(--spacing-unit) * 5); /* 8px * 5 = 40px */
+    margin-bottom: calc(var(--spacing-unit) * 5); /* 8px * 5 = 40px */
+  }
+  .banner-slider .banner-dots li {
+    width: 7px;
+    height: 7px;
+    margin: calc(var(--spacing-unit) * 0.625); /* 8px * 0.625 = 5px */
+  }
+  .banner-slider .banner-dots li.active {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-slider {
+    height: 25vh;
+  }
+  .banner-container {
+    margin-top: calc(var(--spacing-unit) * 3.75); /* 8px * 3.75 = 30px */
+    margin-bottom: calc(var(--spacing-unit) * 3.75); /* 8px * 3.75 = 30px */
+  }
+  .banner-slider .banner-dots li {
+    width: 6px;
+    height: 6px;
+    margin: calc(var(--spacing-unit) * 0.625); /* 8px * 0.625 = 5px */
+  }
+  .banner-slider .banner-dots li.active {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.partner-slider-container {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px; /* Added padding for better responsiveness */
+}
+
+.partner-slider {
+  width: 100%;
+  height: var(--logo-height);
+  overflow: hidden;
+  position: relative;
+  /* Optional: Add a gradient mask for visual effect */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.partner-list {
+  display: flex;
+  align-items: center;
+  /* The width will be set dynamically via JavaScript */
+  animation: autoScroll linear infinite;
+}
+
+.partner-slider-container h1,
+.partner-slider-container button {
+  margin: 20px 0;
+}
+
+.partner-list .partner-item {
+  width: var(--logo-width);
+  height: var(--logo-height);
+  flex: 0 0 var(--logo-width);
+  padding: 0 10px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.partner-list .partner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.partner-list .partner-item img:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+@keyframes autoScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(
+      -50%
+    ); /* Initial value, will be updated via JavaScript */
+  }
+}
+
+/* Optional: Pause animation on hover */
+.partner-slider:hover .partner-list {
+  animation-play-state: paused;
+}
+
+/* Approved Card Section */
+.approved-card {
+  background-color: #fff;
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: calc(var(--spacing-unit) * 5);
+}
+
+.approved-card h2 {
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.approved-card p {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.approved-card .qr-code img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-top: calc(var(--spacing-unit) * 2);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+/* Info Message Styling */
+.info-message {
+  background-color: var(--info-color);
+  color: var(--text-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-top: calc(var(--spacing-unit) * 3);
+  text-align: center;
+}
+
+/* Keyframes for Auto Scrolling */
+@keyframes autoScroll {
+  from {
+    transform: translateX(100%); /* Start from the right */
+  }
+  to {
+    transform: translateX(
+      calc(-1 * var(--partner-slider-width) * var(--partner-slider-quantity))
+    ); /* End at the last logo */
+  }
+}
+
+/* Responsive Styling Adjustments */
+@media (max-width: 768px) {
+  /* Dashboard Overview */
+  .dashboard-overview {
+    padding: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+  }
+
+  /* Welcome Section */
+  .welcome-section h1 {
+    font-size: 24px;
+  }
+
+  .welcome-section p {
+    font-size: var(--font-size-small);
+  }
+
+  /* Points Balance Section */
+  .points-balance {
+    padding: calc(var(--spacing-unit) * 2);
+  }
+
+  .points-balance h2 {
+    font-size: var(--font-size-base);
+  }
+
+  .points-balance p {
+    font-size: var(--font-size-small);
+  }
+
+  .points-balance .btn {
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+    font-size: var(--font-size-small);
+  }
+
+  /* Membership CTA Section */
+  .membership-cta {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .membership-cta h2 {
+    font-size: var(--font-size-base);
+  }
+
+  .membership-cta p {
+    font-size: var(--font-size-small);
+  }
+
+  .membership-cta .cta-button {
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5);
+    font-size: var(--font-size-small);
+  }
+
+  /* Approved Card Section */
+  .approved-card {
+    padding: calc(var(--spacing-unit) * 2);
+  }
+
+  .approved-card h2 {
+    font-size: var(--font-size-base);
+  }
+
+  .approved-card p {
+    font-size: var(--font-size-small);
+  }
+
+  .approved-card .qr-code img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Rewards Section */
+  .rewards-section h2 {
+    font-size: var(--font-size-base);
+  }
+
+  .reward-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Partner Slider */
+  .partner-slider-container {
+    margin: 20px auto;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.mb-1 {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.mb-2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

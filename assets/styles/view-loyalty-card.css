@@ -1,0 +1,190 @@
+/* assets/styles/view-loyalty-card.css */
+
+/* Main Content Styling */
+.container.main-content {
+  max-width: 800px;
+  margin: calc(var(--spacing-unit) * 5) auto;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.container.main-content h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  text-align: center;
+}
+
+.application-details {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.application-details p {
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.application-details strong {
+  color: var(--primary-color);
+}
+
+.qr-code {
+  text-align: center;
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.qr-code img {
+  max-width: 200px;
+  border: 1px solid var(--secondary-dark);
+  padding: calc(var(--spacing-unit) * 1);
+  border-radius: var(--border-radius);
+}
+
+.actions {
+  margin-top: calc(var(--spacing-unit) * 4);
+  text-align: center;
+}
+
+.actions .action-form {
+  display: inline-block;
+  margin: 0 calc(var(--spacing-unit) * 1);
+}
+
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius);
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.approve-btn {
+  background-color: var(--success-color);
+}
+
+.approve-btn:hover {
+  background-color: hsl(
+    var(--success-hue, 120),
+    var(--success-saturation, 60%),
+    var(--success-lightness, 40%)
+  );
+}
+
+.reject-btn {
+  background-color: var(--error-color);
+}
+
+.reject-btn:hover {
+  background-color: hsl(
+    var(--error-hue, 0),
+    var(--error-saturation, 70%),
+    var(--error-lightness, 50%)
+  );
+}
+
+/* Navbar Styling */
+/* If navbar styles are consistent across all admin pages, consider moving them to a common CSS file like admin.css or theme.css */
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container.main-content {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .container.main-content h1 {
+    font-size: 24px;
+  }
+
+  .application-details p {
+    font-size: var(--font-size-small);
+  }
+
+  .qr-code img {
+    max-width: 150px;
+  }
+
+  .actions button {
+    padding: calc(var(--spacing-unit) * 0.8) calc(var(--spacing-unit) * 1.5);
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for better focus */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: "Roboto", sans-serif; /* Clean font */
+}
+
+/* Modal Title */
+.modal-content h2 {
+  font-size: 1.6rem;
+  color: #007bff; /* Matching the color in your screenshot */
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Proof of Payment Image */
+.proof-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border: 1px solid #ddd; /* Subtle border around the image */
+  border-radius: 4px;
+}

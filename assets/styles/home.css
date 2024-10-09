@@ -1,0 +1,469 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.home-slider {
+  width: 1080px;
+  max-width: 100vw;
+  height: calc(100vh - 100px);
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.home-slider .home-list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+
+.home-slider .home-list img {
+  width: 1080px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.home-slider .home-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.home-slider .home-dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.home-slider .home-dots li.active {
+  width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .home-slider {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-slider {
+    height: 250px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-slider {
+    height: 100px;
+    width: 100%;
+  }
+}
+
+.slider-main-cont {
+  padding: 0 50px;
+  margin: 50px auto;
+}
+
+.slider-cont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  padding: 10px;
+}
+
+.slide img {
+  width: 200px; /* Set a fixed width */
+  height: 240px; /* Set a fixed height */
+  object-fit: cover; /* This ensures the image covers the area while maintaining aspect ratio */
+  border-radius: 8px;
+}
+
+.prev,
+.next {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-radius: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets and medium-sized screens (768px and below) */
+@media (max-width: 1024px) {
+  .slide {
+    min-width: 25%; /* Show 3 cards on tablets */
+  }
+
+  .slide img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* Tablets and medium-sized screens (768px and below) */
+@media (max-width: 850px) {
+  .slide {
+    min-width: 33.33%; /* Show 3 cards on tablets */
+  }
+
+  .slide img {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 650px) {
+  .slide {
+    min-width: 50%; /* Show 2 cards*/
+  }
+
+  .slide img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 425px) {
+  .slide {
+    min-width: 100%; /* Show 1 card */
+  }
+
+  .slide img {
+    width: 140px;
+    height: 180px;
+  }
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.text-image-container {
+  width: 100%;
+  padding: 40px 120px;
+  background-color: var(--primary-dark);
+  color: var(--background-color);
+}
+
+.text-image-container img {
+  width: 40%;
+  border-radius: 24px;
+}
+
+.text-container {
+  width: 60%;
+}
+
+.text-container h1 {
+  font-family: var(--accent-font);
+  color: inherit;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1128px) {
+  .main-container {
+    gap: 20px;
+  }
+
+  .text-image-container {
+    width: 100%;
+    padding: 40px 100px;
+  }
+
+  .text-image-container img {
+    width: 50%;
+  }
+
+  .text-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 873px) {
+  .main-container {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .text-image-container {
+    width: 100%;
+    padding: 40px 60px;
+  }
+
+  .text-image-container img {
+    width: 80%;
+  }
+
+  .text-container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* General styling for large screens */
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 80px; */
+  /* margin-bottom: 80px; */
+}
+
+.banner-slider {
+  width: 100%;
+  max-width: 100vw;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-slider .banner-list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.banner-slider .banner-list img {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.banner-slider .banner-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.banner-slider .banner-dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.banner-slider .banner-dots li.active {
+  width: 30px;
+}
+
+/* Adjust for medium screens */
+@media screen and (max-width: 1024px) {
+  .banner-slider {
+    height: 40vh;
+  }
+  .banner-slider .banner-dots li {
+    width: 8px;
+    height: 8px;
+    margin: 8px;
+  }
+  .banner-slider .banner-dots li.active {
+    width: 25px;
+  }
+}
+
+/* Adjust for tablets and small laptops */
+@media screen and (max-width: 768px) {
+  .banner-slider {
+    height: 35vh;
+  }
+  .banner-slider .banner-dots li {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Adjust for small tablets and large phones */
+@media screen and (max-width: 600px) {
+  .banner-slider {
+    height: 30vh;
+  }
+  .banner-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .banner-slider .banner-dots li {
+    width: 7px;
+    height: 7px;
+  }
+  .banner-slider .banner-dots li.active {
+    width: 20px;
+  }
+}
+
+/* Adjust for phones */
+@media screen and (max-width: 480px) {
+  .banner-slider {
+    height: 25vh;
+  }
+  .banner-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .banner-slider .banner-dots li {
+    width: 6px;
+    height: 6px;
+    margin: 5px;
+  }
+  .banner-slider .banner-dots li.active {
+    width: 15px;
+  }
+}
+
+.partner-slider-container {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px; /* Added padding for better responsiveness */
+}
+
+.partner-slider {
+  width: 100%;
+  height: var(--logo-height);
+  overflow: hidden;
+  position: relative;
+  /* Optional: Add a gradient mask for visual effect */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.partner-list {
+  display: flex;
+  align-items: center;
+  /* The width will be set dynamically via JavaScript */
+  animation: autoScroll linear infinite;
+}
+
+.partner-slider-container h1,
+.partner-slider-container button {
+  margin: 20px 0;
+}
+
+.partner-list .partner-item {
+  width: var(--logo-width);
+  height: var(--logo-height);
+  flex: 0 0 var(--logo-width);
+  padding: 0 10px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.partner-list .partner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.partner-list .partner-item img:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+@keyframes autoScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(
+      -50%
+    ); /* Initial value, will be updated via JavaScript */
+  }
+}
+
+/* Optional: Pause animation on hover */
+.partner-slider:hover .partner-list {
+  animation-play-state: paused;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-dark);
+  color: var(--background-color);
+  height: 40vh;
+}
+
+.cta-container h1 {
+  color: inherit;
+}
